@@ -1,0 +1,40 @@
+.navigation {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+
+    .date {
+        align-self: center;
+        align-items: center;
+        margin: auto 0.5em;
+        font-size: $text_size;
+    }
+
+
+    &__btn {
+        padding: $margin_medium;
+        margin: $margin_small;
+        border: 1px solid $accent-color;
+        border-radius: $border-radius;
+        background-color: $bg-color;
+        color: $font-color;
+    
+        &:hover{
+            background-color: $accent-color;
+            color: $bg-color;
+        }
+
+        &:disabled,
+        button[disabled] {
+            cursor: cursor;
+            background-color: inherit;
+            color: inherit;
+            opacity: 0.5;
+        }
+
+        i {
+            color: inherit;
+        }
+    }
+}

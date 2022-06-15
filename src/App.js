@@ -1,24 +1,17 @@
-import logo from './logo.svg';
-import './App.css';
-
+import React from 'react';
+import Header from './componetns/Header';
+import Navigation from './componetns/Navigation';
+import Generator from './componetns/Generator';
+import Week from './componetns/Week'; 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+      <div className='main'>
+        <Header />
+        <Navigation />
+        <Week />
+        <Generator />
+      </div>
+
   );
 }
 
