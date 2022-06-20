@@ -5,3 +5,10 @@ body {
     color: $font-color;
     display: flex;
 }
+
+.not-found {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}

@@ -1,17 +1,19 @@
 import React from 'react';
-import Header from './componetns/Header';
-import Navigation from './componetns/Navigation';
-import Generator from './componetns/Generator';
-import Week from './componetns/Week'; 
+import { Provider } from 'react-redux';
+import config from './store/config';
+
+import AppRoutes from './configs/routes';
+
+const store = config();
+
+
 function App() {
   return (
-      <div className='main'>
-        <Header />
-        <Navigation />
-        <Week />
-        <Generator />
-      </div>
-
+    // <React.StrictMode>
+    <Provider store={store}>
+      <AppRoutes />
+    </Provider>
+    //</React.StrictMode>
   );
 }
 
