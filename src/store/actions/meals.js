@@ -7,7 +7,6 @@ export const addMeal = (
       note = '',
       type = '',
       date = '',
-      type = '',
       createdAt = 0
     } = {}
   ) => ({

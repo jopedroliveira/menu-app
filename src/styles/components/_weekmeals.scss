@@ -5,7 +5,7 @@
     margin: auto;
     align-items: center;
     justify-content: center;
-    
+
     .plan {
         flex-direction: row;
         margin: 0%;
@@ -27,13 +27,13 @@
     padding: $margin_medium;
     border-radius: $border-radius;
     box-shadow: 0px 0px 5px $shadow-color;
-    
-    &.empty{
+
+    &.empty {
         box-shadow: none;
         background-color: $shadow-color-light;
     }
 
-    &__date{
+    &__date {
         margin: $margin_text_small 0;
         font-size: $text_size;
     }

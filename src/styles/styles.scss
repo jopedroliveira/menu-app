@@ -1,7 +1,9 @@
 @import '~normalize.css/normalize.css';
 @import './base/settings';
 @import './base/general';
+@import './base/typography';
 @import './components/header';
 @import './components/navigation';
 @import './components/weekmeals';
 @import './components/generator';
+@import './components/recipes';

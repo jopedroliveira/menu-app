@@ -1,17 +1,17 @@
 import React from 'react';
 
-import Week from './../componetns/Week';
-import Navigation from './../componetns/Navigation';
-import Generator from './../componetns/Generator';
+import Week from '../components/Week';
+import Navigation from '../components/Navigation';
+import Generator from '../components/Generator';
 
 
 
 const Dashboard = () => {
   return (
     <div className='main'>
-        <Navigation />
-        <Week />
-        <Generator />
+      <Navigation />
+      <Week />
+      <Generator />
     </div>
   )
 }
