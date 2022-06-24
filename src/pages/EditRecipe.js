@@ -1,19 +1,18 @@
-import React, { useEffect, useState } from 'react';
+import React from 'react';
 import { connect } from 'react-redux';
 import RecipeForm from '../components/RecipeForm';
-import { Navigate, useNavigate, useParams } from 'react-router-dom';
-import { editRecipe } from '../store/actions/recipes';
+import { useParams } from 'react-router-dom';
+import { startEditRecipe } from '../store/actions/recipes';
 import NotFound from './NotFound';
 
 
 const EditRecipe = (props) => {
-	const navigate = useNavigate();
 	
 	const { id } = useParams();	
-	const [recipe, setRecipe] =  useState(props.recipes.find((recipe) => recipe.id === id));
+	const recipe = props.recipes.find((recipe) => recipe.id === id);
 	
 	const handleSubmit = (recipe) => {
-		props.dispatch(editRecipe(id, recipe));
+		props.dispatch(startEditRecipe(id, recipe));
 	}
 
 	return ( recipe ? 

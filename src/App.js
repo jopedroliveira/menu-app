@@ -1,19 +1,19 @@
 import React from 'react';
-import { Provider } from 'react-redux';
-import config from './store/config';
-
 import AppRoutes from './configs/routes';
 
-const store = config();
-
-
 function App() {
+  // useEffect(() => {
+  //   const unsubscribe = onSnapshot(collection(db, 'recipes'), (snapshot) => {
+  //     console.log(snapshot.docs.map((doc) => doc.data()));
+  //   });
+
+  //   return unsubscribe 
+  // }, []);
+
+  // store.dispatch(startSetRecipes()).then(console.log('done'))
+  
   return (
-    // <React.StrictMode>
-    <Provider store={store}>
       <AppRoutes />
-    </Provider>
-    //</React.StrictMode>
   );
 }
 

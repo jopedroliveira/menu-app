@@ -1,12 +1,12 @@
 import React from 'react'
-import { useState, useEffect } from 'react';
+import { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 
 const RecipeForm = (props) => {
   const navigate = useNavigate();
 
 	const [title, setTitle] = useState(props.recipe ? props.recipe.title : '');
-  const [notes, setNotes] = useState(props.recipe ? props.recipe.notes : '');
+  const [note, setNote] = useState(props.recipe ? props.recipe.note : '');
   const [error, setError] = useState('');
 
   const handleSubmitButton = (e) => {
@@ -16,13 +16,13 @@ const RecipeForm = (props) => {
       setError('Please provide a valid title');
     } else {
       setError('');
-      props.onSubmit({title: title, notes: notes});
+      props.onSubmit({title, note});
       
       if(props.recipe){
        navigate('/recipes');
       } else {
         setTitle('');
-        setNotes('');
+        setNote('');
       }
     }
   }
@@ -41,9 +41,9 @@ const RecipeForm = (props) => {
         <textarea 
           className='form__field text-area'
           type='text'
-          placeholder='notes'
-          value={notes}
-          onChange={(e) => {setNotes(e.target.value)}}></textarea>
+          placeholder='note'
+          value={note}
+          onChange={(e) => {setNote(e.target.value)}}></textarea>
         <button
           className='form__submit__btn'
           onClick={handleSubmitButton}>Submit</button>

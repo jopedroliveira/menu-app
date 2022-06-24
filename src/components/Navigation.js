@@ -10,7 +10,7 @@ const Navigation = (props) => {
 
   useEffect(() => {
     setIsCurrent(today.isSame(props.filters.startDate, 'week'));
-  })
+  }, [today, props.filters.startDate])
 
   const handleRestartDate = () => {
     props.dispatch(setCurrentWeek());
